@@ -4,7 +4,7 @@ export default function Tabs() {
   const [tabs, setTabs] = useState([
     {
       title: "Job preview",
-      active: false,
+      active: true,
     },
     {
       title: "Applicants",
