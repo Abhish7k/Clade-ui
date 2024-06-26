@@ -2,12 +2,15 @@ import { IoChevronDown } from "react-icons/io5";
 
 export default function Navbar() {
   return (
-    <div className="mx-10 mt-5 flex justify-between items-center font-medium">
-      <div className="px-4 py-3 bg-[#E7E7E7] text-[#DC4A2D] font-medium ">
+    <div className="mx-10 mt-5 flex justify-between items-center font-medium transition-all">
+      <a
+        href="/"
+        className="px-4 py-3 bg-[#E7E7E7] text-[#DC4A2D] font-medium "
+      >
         Logo
-      </div>
+      </a>
 
-      <div className="flex items-center gap-20 p-2 border rounded-full">
+      <div className="hidden md:flex items-center gap-20 p-2 border rounded-full transition-all">
         <div className="flex gap-2 px-4 py-3 rounded-full bg-[#DC4A2D] text-white border-2 border-[#FCB4A5] cursor-pointer">
           <img src="/icons/briefcase.png" />
           Jobs
