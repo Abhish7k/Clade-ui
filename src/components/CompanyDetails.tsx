@@ -47,7 +47,7 @@ const CompDetails = {
     },
     {
       label: "Founded By",
-      data: "Scott Farquhar,U+00a0 Mike Cannon-Brookes",
+      data: "Scott Farquhar, Mike Cannon-Brookes",
     },
   ],
 };
