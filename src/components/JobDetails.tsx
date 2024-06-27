@@ -1,6 +1,9 @@
+import AboutTheJobs from "./AboutTheJobs";
+import CompanyDetails from "./CompanyDetails";
+
 export default function JobDetails() {
   return (
-    <div className="pt-10 border rounded-lg shadow-sm">
+    <div className="pt-10 rounded-lg shadow-sm">
       <div className="flex pl-20 items-center gap-5 mb-2">
         <h1 className="text-3xl font-bold text-[#3D3D3D] ">
           {jobDetails.title}
@@ -35,11 +38,7 @@ export default function JobDetails() {
         </div>
         <div className="h-1.5 w-1.5 rounded-full bg-[#D1D1D1]"></div>
         <div className="flex items-center gap-2">
-          <img
-            src="/public/icons/coins-stacked-03.png"
-            alt=""
-            className="w-5"
-          />
+          <img src="/icons/coins-stacked-03.png" alt="" className="w-5" />
           <span className="text-xl text-[#5D5D5D]">
             {jobDetails.salaryRange}
           </span>
@@ -82,6 +81,10 @@ export default function JobDetails() {
           </p>
         </div>
       </div>
+
+      <AboutTheJobs />
+
+      <CompanyDetails />
     </div>
   );
 }

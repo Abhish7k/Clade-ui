@@ -1,6 +1,36 @@
+import { useState } from "react";
+import { FiMessageSquare } from "react-icons/fi";
 import { IoChevronDown } from "react-icons/io5";
+import { LuBriefcase } from "react-icons/lu";
+import { PiHandCoins } from "react-icons/pi";
 
 export default function Navbar() {
+  const [tabs, setTabs] = useState([
+    {
+      title: "Jobs",
+      icon: LuBriefcase,
+      active: true,
+    },
+    {
+      title: "Messages",
+      icon: FiMessageSquare,
+      active: false,
+    },
+    {
+      title: "Payments",
+      icon: PiHandCoins,
+      active: false,
+    },
+  ]);
+
+  const handleTabClick = (index: number) => {
+    const newTabs = tabs.map((tab, i) => ({
+      ...tab,
+      active: i === index,
+    }));
+    setTabs(newTabs);
+  };
+
   return (
     <div className="mx-10 mt-5 flex justify-between items-center font-medium transition-all">
       <a
@@ -10,20 +40,23 @@ export default function Navbar() {
         Logo
       </a>
 
-      <div className="hidden md:flex items-center gap-20 p-2 border rounded-full transition-all">
-        <div className="flex gap-2 px-4 py-3 rounded-full bg-[#DC4A2D] text-white border-2 border-[#FCB4A5] cursor-pointer">
-          <img src="/icons/briefcase.png" />
-          Jobs
-        </div>
-        <div className="flex gap-2 items-center cursor-pointer text-[#B0B0B0]">
-          <img src="/icons/message-square-01.png" alt="" />
-          <div className="absolute h-2 w-2 mb-4 ml-4 rounded-full bg-[#DC4A2D]"></div>
-          Messages
-        </div>
-        <div className="flex items-center gap-2 cursor-pointer text-[#B0B0B0]">
-          <img src="/icons/coins-hand.png" alt="" />
-          Payments
-        </div>
+      <div className="hidden md:flex items-center gap-16 p-2 border rounded-full transition-all">
+        {tabs.map((item, idx) => (
+          <button key={idx} className="" onClick={() => handleTabClick(idx)}>
+            <div
+              className={`flex gap-2 items-center cursor-pointer 
+                ${
+                  item.active
+                    ? "px-4 py-3 text-white bg-[#DC4A2D] border-[#FCB4A5] rounded-full"
+                    : "text-[#B0B0B0]"
+                }
+              `}
+            >
+              <item.icon className="w-5 h-5 mb-1" />
+              {item.title}
+            </div>
+          </button>
+        ))}
       </div>
 
       <div className="flex items-center gap-4">
