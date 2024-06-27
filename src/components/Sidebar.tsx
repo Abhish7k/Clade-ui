@@ -9,13 +9,13 @@ export default function Sidebar() {
       <div className="grid grid-cols-2 gap-4 text-[16px]">
         <div className="">
           <button className="flex w-full justify-center py-3 items-center gap-2 bg-[#FEF4F2] text-[#DC4A2D] border-[0.8px] border-[#DC4A2D] rounded-lg hover:bg-red-100 transition-all">
-            <img src="/public/icons/trash-03.png" alt="" />
+            <img src="/icons/trash-03.png" alt="" />
             Delete job
           </button>
         </div>
         <div className="">
           <button className="flex w-full justify-center px-6 py-3 items-center gap-2 bg-[#DC4A2D] text-white rounded-lg border-2 border-[#FED3CA] hover:bg-red-600 transition-all">
-            <img src="/public/icons/edit-02.png" alt="" />
+            <img src="/icons/edit-02.png" alt="" />
             Edit job
           </button>
         </div>

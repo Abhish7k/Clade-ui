@@ -35,7 +35,9 @@ export default function Tabs() {
           <div key={idx} className="flex flex-col">
             <button
               className={`${
-                item.active ? "text-[#DC4A2D]" : "text-[#888888]"
+                item.active
+                  ? "text-[#DC4A2D] font-semibold"
+                  : "text-[#888888] font-medium"
               } cursor-pointer`}
               onClick={() => handleTabClick(idx)}
             >

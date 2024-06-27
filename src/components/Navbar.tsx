@@ -32,10 +32,10 @@ export default function Navbar() {
   };
 
   return (
-    <div className="mx-10 mt-5 flex justify-between items-center font-medium transition-all">
+    <div className="mx-[40px] my-[24px] flex justify-between items-center font-medium transition-all">
       <a
         href="/"
-        className="px-4 py-3 bg-[#E7E7E7] text-[#DC4A2D] font-medium "
+        className="px-6 py-3 text-center bg-[#E7E7E7] text-[#DC4A2D] text-[20px] font-[700] "
       >
         Logo
       </a>
