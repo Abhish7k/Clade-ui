@@ -12,7 +12,9 @@ export default function App() {
         <div className="col-span-9">
           <JobDetails />
         </div>
-        <Sidebar />
+        <div className="col-span-3">
+          <Sidebar />
+        </div>
       </div>
     </div>
   );
